@@ -1,5 +1,5 @@
 import sys
-from lab_3_1 import read_log
+from lab_3_1a import read_log
 
 
 def sort_log(lista, indeks):
@@ -17,6 +17,6 @@ if __name__ == "__main__":
     if len(logs[0]) - 1 < sort_indeks or sort_indeks < 0:
         raise RuntimeError("Nieprawidlowy index do sortowania")
     sorted_logs = sort_log(logs, sort_indeks)
-    # testowy wydruk     python lab_3_2.py < NASA 3
+    # testowy wydruk     python lab_3_1b.py < NASA 3
     for log in sorted_logs:
         print(log)

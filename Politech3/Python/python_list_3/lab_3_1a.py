@@ -46,6 +46,6 @@ def read_log():
 
 if __name__ == "__main__":
     logs = read_log()
-    # testowy wydruk     python lab_3_1.py < NASA
+    # testowy wydruk     python lab_3_1a.py < NASA
     for log in logs:
         print(log)
