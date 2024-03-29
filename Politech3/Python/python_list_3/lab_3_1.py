@@ -7,7 +7,7 @@ def read_log():
     for line in sys.stdin:
         line = line.strip()
         # print("line: ", line)
-        if line:  # Sprawdź, czy linia nie jest pusta
+        if line:  # Jeżeli linia nie jest pusta
             elements = line.split()
             length = len(elements)
             # print("elements: ", elements)
@@ -19,13 +19,13 @@ def read_log():
             datetime_obj = datetime.strptime(datetime_str, "%d/%b/%Y:%H:%M:%S %z")
             # print("datetime_obj: ", datetime_obj)
             # print("date: ", datetime_obj.time())
-            request = None
-            link = None
-            protocol = None
+            request = ""
+            link = ""
+            protocol = ""
             if elements[length - 3][-2] != '"':
                 request = elements[5][1:]
                 if length < 10:
-                    protocol = None
+                    protocol = ""
                     link = elements[6][:-1]
                 else:
                     protocol = elements[-3][:-1]
@@ -46,5 +46,6 @@ def read_log():
 
 if __name__ == "__main__":
     logs = read_log()
+    # testowy wydruk     python lab_3_1.py < NASA
     for log in logs:
         print(log)
