@@ -22,3 +22,4 @@ if __name__ == "__main__":
     # testowy wydruk     python lab_3_1c.py < NASA burger.letters.com
     for log in logs_from_pages:
         print(log)
+
