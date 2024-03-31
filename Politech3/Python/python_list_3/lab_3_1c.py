@@ -16,9 +16,9 @@ if __name__ == "__main__":
     except:
         raise RuntimeError("Nieprawidlowy argument")
     # Pobieramy listę krotek z poprzedniego zadania
-    logs = read_log()
+    lista_krotek = read_log()
 
-    logs_from_pages = get_entries_by_addr(logs, page)
+    logs_from_pages = get_entries_by_addr(lista_krotek, page)
     # testowy wydruk     python lab_3_1c.py < NASA burger.letters.com
     for log in logs_from_pages:
         print(log)
