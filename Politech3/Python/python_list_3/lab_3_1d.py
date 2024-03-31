@@ -28,7 +28,6 @@ if __name__ == "__main__":
     dwie_listy = True
     try:
         if len(sys.argv) == 2:
-            print(sys.argv[1])
             # bez opcjonalnego parametru - zwracamy dwie listy
             if sys.argv[1] == '1':
                 dwie_listy = False
@@ -40,14 +39,14 @@ if __name__ == "__main__":
         # dwie_listy = False
     except:
         raise RuntimeError("Nieprawidlowy argument")
-    print(dwie_listy)
+    # print(dwie_listy)
     # Pobieramy listę krotek z zadania lab_3_1a
     lista_krotek = read_log()
 
     listy = get_failed_reads(lista_krotek, dwie_listy)
-    # testowy wydruk     python lab_3_1d.py < NASA 2
+    # testowy wydruk     python lab_3_1d.py < NASA 1
     for lista in listy:
-        print("lista")
+        # print("lista")
         for log in lista:
             print(log)
 
